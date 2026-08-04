@@ -582,6 +582,16 @@ gStdScripts_End::
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
 
+	.include "data/maps/FallarborTown_ContestHall/scripts.inc"
+	.include "data/maps/VerdanturfTown_ContestHall/scripts.inc"
+	.include "data/maps/SlateportCity_ContestHall/scripts.inc"
+	.include "data/maps/FallarborTown_ContestLobby/scripts.inc"
+	.include "data/maps/VerdanturfTown_ContestLobby/scripts.inc"
+	.include "data/maps/SlateportCity_ContestLobby/scripts.inc"
+
+
+
+
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 	goto EventScript_ResetMrBriney
@@ -1059,3 +1069,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+

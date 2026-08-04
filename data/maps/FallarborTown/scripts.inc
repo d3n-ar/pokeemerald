@@ -93,3 +93,10 @@ FallarborTown_Text_MoveTutorSign:
 	.string "MOVE TUTOR'S HOUSE\n"
 	.string "“New moves taught to POKéMON.”$"
 
+FallarborTown_EventScript_ContestSign::
+	msgbox FallarborTown_Text_ContestSign, MSGBOX_SIGN
+	end
+
+FallarborTown_Text_ContestSign:
+	.string "FALLARBOR TOWN CONTEST HALL\p"
+	.string "“Peform between the ashes!”$"

@@ -1350,3 +1350,32 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_EventScript_ContestSign::
+	msgbox SlateportCity_Text_ContestSign, MSGBOX_SIGN
+	end
+
+SlateportCity_Text_ContestSign:
+	.string "SLATEPORT CITY CONTEST HALL\p"
+	.string "“Show off the skills of your POKéMONs!”$"
+
+SlateportCity_EventScript_ContestGirl::
+	msgbox SlateportCity_Text_ContestGirl, MSGBOX_NPC
+	end
+
+SlateportCity_Text_ContestGirl:
+	.string "Me and my SKITTY are going to\n"
+	.string "compete in the Slateport City\l"
+	.string "Beauty contest.\p"
+	.string "I'm so excited!$"
+
+SlateportCity_EventScript_ContestGirlSkitty::
+	faceplayer
+	playmoncry SPECIES_SKITTY, CRY_MODE_ENCOUNTER
+	msgbox SlateportCity_Text_ContestGirlSkitty, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+SlateportCity_Text_ContestGirlSkitty:
+	.string "nay nay$"

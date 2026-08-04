@@ -915,6 +915,11 @@ extern const u8 gText_MoveRelearnerContestMovesTitle[];
 extern const u8 gText_MoveRelearnerAppeal[];
 extern const u8 gText_MoveRelearnerJam[];
 
+extern const u8 gText_NormalContestRank[];
+extern const u8 gText_SuperContestRank[];
+extern const u8 gText_HyperContestRank[];
+extern const u8 gText_MasterContestRank[];
+
 extern const u8 gText_Kira[];
 extern const u8 gText_Amy[];
 extern const u8 gText_John[];

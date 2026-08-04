@@ -324,9 +324,6 @@ LilycoveCity_ContestLobby_EventScript_ContestReceptionist::
 
 LilycoveCity_ContestLobby_EventScript_SetContestType::
 	switch VAR_CONTEST_RANK
-	case CONTEST_RANK_NORMAL, LilycoveCity_ContestLobby_EventScript_SetNormalContestType
-	case CONTEST_RANK_SUPER, LilycoveCity_ContestLobby_EventScript_SetSuperContestType
-	case CONTEST_RANK_HYPER, LilycoveCity_ContestLobby_EventScript_SetHyperContestType
 	case CONTEST_RANK_MASTER, LilycoveCity_ContestLobby_EventScript_SetMasterContestType
 	return
 

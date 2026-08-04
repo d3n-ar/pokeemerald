@@ -254,6 +254,11 @@ const u8 gText_ThePokemonList[] = _("the POKéMON LIST");
 const u8 gText_TheShop[] = _("the shop");
 const u8 gText_ThePC[] = _("the PC");
 
+const u8 gText_NormalContestRank[] = _("NORMAL");
+const u8 gText_SuperContestRank[] = _("SUPER");
+const u8 gText_HyperContestRank[] = _("HYPER");
+const u8 gText_MasterContestRank[] = _("MASTER");
+
 const u8 *const gBagMenu_ReturnToStrings[] =
 {
     [ITEMMENULOCATION_FIELD]               = gText_TheField,

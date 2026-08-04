@@ -61,6 +61,10 @@ VerdanturfTown_EventScript_RusturfTunnelSign::
 	msgbox VerdanturfTown_Text_RusturfTunnelSign, MSGBOX_SIGN
 	end
 
+VerdanturfTown_ES_ContestHallSign::
+	msgbox VerdanturfTown_Text_ContestHallSign, MSGBOX_SIGN
+	end
+
 VerdanturfTown_Text_ManTryingToDigTunnel:
 	.string "My papa told me.\p"
 	.string "He says this tunnel is full of\n"
@@ -123,3 +127,7 @@ VerdanturfTown_Text_RusturfTunnelSign:
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 
+VerdanturfTown_Text_ContestHallSign:
+	.string "VERDANTURF TOWN CONTEST HALL\p"
+	.string "“Represent the beauty of\n"
+	.string "Hoenn!”$"
