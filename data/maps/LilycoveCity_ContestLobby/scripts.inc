@@ -318,6 +318,7 @@ LilycoveCity_ContestLobby_EventScript_ContestReceptionist::
 	special SetContestTrainerGfxIds
 	call LilycoveCity_ContestLobby_EventScript_SetPlayerGfx
 	call LilycoveCity_ContestLobby_EventScript_SetContestType
+	setvar VAR_CONTEST_LOCATION, 4
 	call LilycoveCity_ContestLobby_EventScript_WarpToContestHall
 	waitstate
 	end
@@ -804,6 +805,7 @@ LilycoveCity_ContestLobby_EventScript_StartLinkContest::
 	special SetLinkContestPlayerGfx
 	setvar VAR_CONTEST_TYPE, CONTEST_TYPE_LINK
 	setvar VAR_CONTEST_RANK, CONTEST_RANK_MASTER
+	setvar VAR_CONTEST_LOCATION, 5
 	call LilycoveCity_ContestLobby_EventScript_WarpToContestHall
 	end
 
