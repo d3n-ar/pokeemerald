@@ -2429,7 +2429,7 @@ void SaveGameFrontier(void)
     i = gPlayerPartyCount;
     LoadPlayerParty();
     SetContinueGameWarpStatusToDynamicWarp();
-    TrySavingData(SAVE_LINK);
+    TrySavingData(SAVE_NORMAL); // forces full save, fixes bug where the player could soft reset to get a duplicate of their pokemon.
     ClearContinueGameWarpStatus2();
     gPlayerPartyCount = i;
 
