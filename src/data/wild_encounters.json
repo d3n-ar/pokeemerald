@@ -1126,12 +1126,12 @@
               },
               {
                 "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_SPINDA"
+                "max_level": 15,
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 14,
-                "max_level": 14,
+                "max_level": 16,
                 "species": "SPECIES_SPINDA"
               },
               {
@@ -1140,9 +1140,9 @@
                 "species": "SPECIES_SLUGMA"
               },
               {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_SPINDA"
+                "min_level": 14,
+                "max_level": 15,
+                "species": "SPECIES_MAGBY"
               },
               {
                 "min_level": 16,
@@ -1150,7 +1150,7 @@
                 "species": "SPECIES_SLUGMA"
               },
               {
-                "min_level": 16,
+                "min_level": 15,
                 "max_level": 16,
                 "species": "SPECIES_SPINDA"
               },
@@ -4539,14 +4539,14 @@
                 "species": "SPECIES_SHUPPET"
               },
               {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_SHUPPET"
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SWINUB"
               },
               {
-                "min_level": 30,
-                "max_level": 30,
-                "species": "SPECIES_SHUPPET"
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SWINUB"
               },
               {
                 "min_level": 25,
@@ -8063,9 +8063,9 @@
                 "species": "SPECIES_SPHEAL"
               },
               {
-                "min_level": 28,
+                "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_ZUBAT"
+                "species": "SPECIES_SWINUB"
               },
               {
                 "min_level": 28,
@@ -8083,9 +8083,9 @@
                 "species": "SPECIES_SPHEAL"
               },
               {
-                "min_level": 32,
-                "max_level": 32,
-                "species": "SPECIES_ZUBAT"
+                "min_level": 26,
+                "max_level": 29,
+                "species": "SPECIES_SWINUB"
               },
               {
                 "min_level": 32,
