@@ -7,7 +7,7 @@ MODERN      ?= 0
 KEEP_TEMPS  ?= 0
 
 # `File name`.gba ('_modern' will be appended to the modern builds)
-FILE_NAME := PokemonEmerald-Rev1.1
+FILE_NAME := PokemonEmerald-URev1.1
 BUILD_DIR := build
 
 # Builds the ROM using a modern compiler
