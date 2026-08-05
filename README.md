@@ -1,4 +1,4 @@
-# Pokémon Emerald
+# Pokémon Emerald (Unofficial REV 1.1)
 
 ### Slateport City Contest Hall
 <img src="assets/slateport.png" alt="Slateport Contest Hall" width="300" height="200">
