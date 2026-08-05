@@ -12,9 +12,15 @@
 <img src="assets/fallarbor.png" alt="Fallarbor Contest Hall" width="300" height="200">
 
 ## Additions
-1. Slateport City, Verdanturf Town and Fallarbor Town Contest Halls re-added
+1. Slateport City, Verdanturf Town and Fallarbor Town Contest Halls re-added.
 
 2. RTC Seed RNG has been fixed.
+
+3. Pomeg Berry BUG FIXED.
+
+4. Battle Frontier Pokemon duplication BUG FIXED.
+
+5. Some refinement in Option menu.
 
 
 
