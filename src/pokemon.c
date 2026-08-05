@@ -2880,11 +2880,10 @@ void CalculateMonStats(struct Pokemon *mon)
         else if (currentHP != 0)
         {
             // BUG: currentHP is unintentionally able to become <= 0 after the instruction below. This causes the pomeg berry glitch.
+            // bug fixe by D3N_AR
             currentHP += newMaxHP - oldMaxHP;
-            #ifdef BUGFIX
             if (currentHP <= 0)
                 currentHP = 1;
-            #endif
         }
         else
         {
