@@ -348,6 +348,22 @@ void PlayerStep(u8 direction, u16 newKeys, u16 heldKeys)
             }
         }
     }
+    if (FlagGet(FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED))
+    {
+        if (JOY_NEW(L_BUTTON) && FlagGet(FLAG_SYS_B_DASH))
+        {
+            if (FlagGet(FLAG_RUN_TOGGLE))
+            {
+                FlagClear(FLAG_RUN_TOGGLE);
+                PlaySE(SE_LEDGE);
+            }
+             else
+            {
+                FlagSet(FLAG_RUN_TOGGLE);
+                PlaySE(SE_LEDGE);
+            }
+        }
+    }
 }
 
 static bool8 TryInterruptObjectEventSpecialAnim(struct ObjectEvent *playerObjEvent, u8 direction)
@@ -655,7 +671,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (FlagGet(FLAG_RUN_TOGGLE) || (heldKeys & B_BUTTON)) && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);

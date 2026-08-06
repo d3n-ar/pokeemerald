@@ -897,6 +897,8 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_Text_SwitchShoesWithRunningShoes
 	waitfanfare
+	clearflag FLAG_HIDE_FEATURE_KING
+	setflag FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
 	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
@@ -937,10 +939,13 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 LittlerootTown_Text_ExplainRunningShoes:
 	.string "MOM: {PLAYER}, those shoes came with\n"
 	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
+	.string "“Press the B Button or toggle it\n"
+	.string "through tapping L Button while wearing\l"
+	.string "these RUNNING SHOES to run extra-fast!\p"
 	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "in the great outdoors!”\p"
+	.string "(You can toggle the features by talking\n"
+	.string "to the feature NPC in Route 101)$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
@@ -1014,3 +1019,148 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+@ The NPC is technically in Route 101, but it is called from here for some reason.
+@ Yeah dude, I have truant irl, so stfu.
+ES_ToggleFeatures::
+	lock
+	faceplayer
+	msgbox T_IAmTheFeatureNPC, MSGBOX_DEFAULT
+	checkflag FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED
+	call_if_set VAR_RESULT, ES_DisableRunToggle
+	call_if_unset VAR_RESULT, ES_EnableRunToggle
+	checkflag FLAG_PREVENT_INDOOR_RUN
+	call_if_set VAR_RESULT, ES_DisableIndoorRun
+	call_if_unset VAR_RESULT, ES_EnableIndoorRun
+	checkflag FLAG_TMHM_SINGLEUSE
+	call_if_set VAR_RESULT, ES_DisableTMTHMSingleUse
+	call_if_unset VAR_RESULT, ES_EnableTMTHMSingleUse
+	msgbox T_Goodbye, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+ES_DisableRunToggle::
+	msgbox T_DoYouRunToggleOff, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_DisableRunToggleYes
+	return
+
+ES_DisableRunToggleYes::
+	clearflag FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED
+	msgbox T_RunToggledOff, MSGBOX_DEFAULT
+	return
+
+ES_EnableRunToggle::
+	msgbox T_DoYouRunToggleOn, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_EnableRunToggleYes
+	return
+
+ES_EnableRunToggleYes::
+	setflag FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED
+	msgbox T_RunToggledOn, MSGBOX_DEFAULT
+	return
+
+ES_DisableIndoorRun::
+	msgbox T_DoYouPreventIndoorRun, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_DisableIndoorRunYes
+	return
+
+ES_DisableIndoorRunYes::
+	clearflag FLAG_PREVENT_INDOOR_RUN
+	msgbox T_IndoorRunDisabled, MSGBOX_DEFAULT
+	return
+
+ES_EnableIndoorRun::
+	msgbox T_DoYouAllowIndoorRun, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_EnableIndoorRunYes
+	return
+
+ES_EnableIndoorRunYes::
+	setflag FLAG_PREVENT_INDOOR_RUN
+	msgbox T_IndoorRunEnabled, MSGBOX_DEFAULT
+	return
+
+ES_DisableTMTHMSingleUse::
+	msgbox T_DoYouDisableTMTHMSingleUse, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_DisableTMHMYes
+	return
+
+ES_DisableTMHMYes::
+	clearflag FLAG_TMHM_SINGLEUSE
+	msgbox T_TMTHMSingleUseDisabled, MSGBOX_DEFAULT
+	return
+
+ES_EnableTMTHMSingleUse::
+	msgbox T_DoYouEnableTMTHMSingleUse, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, ES_EnableTMHMYes
+	return
+
+ES_EnableTMHMYes::
+	setflag FLAG_TMHM_SINGLEUSE
+	msgbox T_TMTHMSingleUseEnabled, MSGBOX_DEFAULT
+	return
+
+T_IAmTheFeatureNPC:
+	.string "Hello, I am the FEATURE KING for toggling\n"
+	.string "various in-game features.$"
+
+T_Goodbye:
+	.string "Goodbye and take care!$"
+
+T_DoYouRunToggleOff:
+	.string "Do you want to turn off the RUN toggle?\n"
+	.string "If you turn it off, you must to hold\n"
+	.string "the B Button to run.$"
+
+T_RunToggledOff:
+	.string "The RUN toggle has been turned off.\n"
+	.string "You must hold the B Button to run.$"
+
+T_DoYouRunToggleOn:
+	.string "Do you want to turn on the RUN toggle?\n"
+	.string "If you turn it on, you can tap the L\n"
+	.string "Button to run as well.$"
+
+T_RunToggledOn:
+	.string "The RUN toggle has been turned on.\n"
+	.string "You can tap the L Button to run.$"
+
+T_DoYouPreventIndoorRun:
+	.string "Do you want to prevent running indoors?\n"
+	.string "If you prevent it, you will no longer\n"
+	.string "be able to run indoors.$"
+
+T_IndoorRunDisabled:
+	.string "Running indoors has been disabled.\n"
+	.string "You can no longer run indoors.$"
+
+T_DoYouAllowIndoorRun:
+	.string "Do you want to allow running indoors?\n"
+	.string "If you allow it, you will be able to\n"
+	.string "run indoors.$"
+
+T_IndoorRunEnabled:
+	.string "Running indoors has been enabled.\n"
+	.string "You can now run indoors.$"
+
+T_DoYouDisableTMTHMSingleUse:
+	.string "Do you want to disable the single-use\n"
+	.string "restriction for TMs and HMs?\n"
+	.string "If you disable it, you will be able to\n"
+	.string "use TMs and HMs multiple times.$"
+
+T_TMTHMSingleUseDisabled:
+	.string "The single-use restriction for TMs and\n"
+	.string "HMs has been disabled.\n"
+	.string "You can now use TMs and HMs multiple\n"
+	.string "times.$"
+
+T_DoYouEnableTMTHMSingleUse:
+	.string "Do you want to enable the single-use\n"
+	.string "restriction for TMs and HMs?\n"
+	.string "If you enable it, you will only be able\n"
+	.string "to use TMs and HMs once.$"
+
+T_TMTHMSingleUseEnabled:
+	.string "The single-use restriction for TMs and\n"
+	.string "HMs has been enabled.\n"
+	.string "You can now only use TMs and HMs once.$"

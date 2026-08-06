@@ -477,7 +477,7 @@ struct PlayersApprentice
     /*0xB1*/ u8 questionsAnswered:4;
     /*0xB1*/ u8 leadMonId:2;
     /*0xB2*/ u8 party:3;
-             u8 saveId:2;
+             u8 saveId:4; // 0: Unassigned, 1-15: Save block ID
              //u8 padding1:3;
     /*0xB3*/ u8 unused;
     /*0xB4*/ u8 speciesIds[MULTI_PARTY_SIZE];

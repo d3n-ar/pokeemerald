@@ -9,6 +9,7 @@
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "event_data.h"
 
 // this file's functions
 static void MovePlayerOnMachBike(u8, u16, u16);
@@ -1055,7 +1056,7 @@ void Bike_HandleBumpySlopeJump(void)
 
 bool32 IsRunningDisallowed(u8 metatile)
 {
-    if (!gMapHeader.allowRunning || IsRunningDisallowedByMetatile(metatile) == TRUE)
+    if ((FlagGet(FLAG_PREVENT_INDOOR_RUN) && !gMapHeader.allowRunning) || IsRunningDisallowedByMetatile(metatile) == TRUE)
         return TRUE;
     else
         return FALSE;

@@ -1225,7 +1225,7 @@
 #define FLAG_HIDE_CONTEST_REPORTER_SLATEPORT                        0x493
 #define FLAG_HIDE_CONTEST_REPORTER_FALLARBOR                        0x494
 #define FLAG_HIDE_CONTEST_REPORTER_VERDANTURF                       0x495
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_HIDE_FEATURE_KING                                      0x496
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
@@ -1506,10 +1506,10 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
+#define FLAG_RUN_TOGGLE                             (SYSTEM_FLAGS + 0x85)
+#define FLAG_PREVENT_INDOOR_RUN                     (SYSTEM_FLAGS + 0x86)
+#define FLAG_TMHM_SINGLEUSE                         (SYSTEM_FLAGS + 0x87)
+#define FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED       (SYSTEM_FLAGS + 0x88)
 #define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
 #define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag

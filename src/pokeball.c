@@ -1320,9 +1320,9 @@ void LoadBallGfx(u8 ballId)
     {
     case BALL_DIVE:
 // BUGFIX: The thrown Timer Ball has a unique fully open sprite that is never used, as it was never included in this case
-#ifdef BUGFIX
+// BUGFIXED by D3N_AR
     case BALL_TIMER:
-#endif
+
     case BALL_LUXURY:
     case BALL_PREMIER:
         break;
