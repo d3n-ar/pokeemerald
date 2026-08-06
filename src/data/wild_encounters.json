@@ -506,8 +506,8 @@
               },
               {
                 "min_level": 4,
-                "max_level": 4,
-                "species": "SPECIES_WINGULL"
+                "max_level": 5,
+                "species": "SPECIES_HERACROSS"
               },
               {
                 "min_level": 3,
@@ -3430,7 +3430,7 @@
                 "species": "SPECIES_LINOONE"
               },
               {
-                "min_level": 26,
+                "min_level": 25,
                 "max_level": 26,
                 "species": "SPECIES_ODDISH"
               },
@@ -3440,9 +3440,9 @@
                 "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 24,
-                "max_level": 24,
-                "species": "SPECIES_ODDISH"
+                "min_level": 27,
+                "max_level": 29,
+                "species": "SPECIES_HERACROSS"
               },
               {
                 "min_level": 25,
@@ -3584,9 +3584,9 @@
                 "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 26,
+                "min_level": 25,
                 "max_level": 26,
-                "species": "SPECIES_ODDISH"
+                "species": "SPECIES_SURSKIT"
               },
               {
                 "min_level": 27,
@@ -3614,9 +3614,9 @@
                 "species": "SPECIES_KECLEON"
               },
               {
-                "min_level": 25,
-                "max_level": 25,
-                "species": "SPECIES_SEEDOT"
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_HERACROSS"
               }
             ]
           },
@@ -10602,9 +10602,9 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 38,
+                "min_level": 36,
                 "max_level": 38,
-                "species": "SPECIES_DITTO"
+                "species": "SPECIES_DIGLETT"
               },
               {
                 "min_level": 35,
@@ -10618,7 +10618,7 @@
               },
               {
                 "min_level": 40,
-                "max_level": 40,
+                "max_level": 41,
                 "species": "SPECIES_LOUDRED"
               },
               {
@@ -10628,13 +10628,13 @@
               },
               {
                 "min_level": 36,
-                "max_level": 36,
-                "species": "SPECIES_WHISMUR"
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
               },
               {
-                "min_level": 38,
-                "max_level": 38,
-                "species": "SPECIES_LOUDRED"
+                "min_level": 36,
+                "max_level": 37,
+                "species": "SPECIES_SHELLDER"
               },
               {
                 "min_level": 42,
@@ -11488,6 +11488,40 @@
                 "min_level": 40,
                 "max_level": 40,
                 "species": "SPECIES_GOLBAT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
+          "base_label": "gBattleFrontier_OutsideEast",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 42,
+                "max_level": 46,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_DRATINI"
               }
             ]
           }
