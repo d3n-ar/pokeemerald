@@ -1119,6 +1119,9 @@ AI_CV_AttackDown_PhysicalTypeList:
 	.byte TYPE_ROCK
 	.byte TYPE_BUG
 	.byte TYPE_STEEL
+	.byte TYPE_FLYING
+	.byte TYPE_POISON
+	.byte TYPE_GRASS
 	.byte -1
 
 AI_CV_DefenseDown:

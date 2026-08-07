@@ -1025,15 +1025,12 @@ ES_ToggleFeatures::
 	lock
 	faceplayer
 	msgbox T_IAmTheFeatureNPC, MSGBOX_DEFAULT
-	checkflag FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED
-	call_if_set VAR_RESULT, ES_DisableRunToggle
-	call_if_unset VAR_RESULT, ES_EnableRunToggle
-	checkflag FLAG_PREVENT_INDOOR_RUN
-	call_if_set VAR_RESULT, ES_DisableIndoorRun
-	call_if_unset VAR_RESULT, ES_EnableIndoorRun
-	checkflag FLAG_TMHM_SINGLEUSE
-	call_if_set VAR_RESULT, ES_DisableTMTHMSingleUse
-	call_if_unset VAR_RESULT, ES_EnableTMTHMSingleUse
+	call_if_set FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED, ES_DisableRunToggle
+	call_if_unset FLAG_RUN_TOGGLE_FUNCTIONALITY_ENABLED, ES_EnableRunToggle
+	call_if_set FLAG_PREVENT_INDOOR_RUN, ES_EnableIndoorRun
+	call_if_unset FLAG_PREVENT_INDOOR_RUN, ES_DisableIndoorRun
+	call_if_set FLAG_TMHM_SINGLEUSE, ES_DisableTMTHMSingleUse
+	call_if_unset FLAG_TMHM_SINGLEUSE, ES_EnableTMTHMSingleUse
 	msgbox T_Goodbye, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -1065,7 +1062,7 @@ ES_DisableIndoorRun::
 	return
 
 ES_DisableIndoorRunYes::
-	clearflag FLAG_PREVENT_INDOOR_RUN
+	setflag FLAG_PREVENT_INDOOR_RUN
 	msgbox T_IndoorRunDisabled, MSGBOX_DEFAULT
 	return
 
@@ -1075,7 +1072,7 @@ ES_EnableIndoorRun::
 	return
 
 ES_EnableIndoorRunYes::
-	setflag FLAG_PREVENT_INDOOR_RUN
+	clearflag FLAG_PREVENT_INDOOR_RUN
 	msgbox T_IndoorRunEnabled, MSGBOX_DEFAULT
 	return
 
@@ -1108,7 +1105,7 @@ T_Goodbye:
 
 T_DoYouRunToggleOff:
 	.string "Do you want to turn off the RUN toggle?\n"
-	.string "If you turn it off, you must to hold\n"
+	.string "If you turn it off, you must to hold\l"
 	.string "the B Button to run.$"
 
 T_RunToggledOff:
@@ -1117,7 +1114,7 @@ T_RunToggledOff:
 
 T_DoYouRunToggleOn:
 	.string "Do you want to turn on the RUN toggle?\n"
-	.string "If you turn it on, you can tap the L\n"
+	.string "If you turn it on, you can tap the L\l"
 	.string "Button to run as well.$"
 
 T_RunToggledOn:
@@ -1126,7 +1123,7 @@ T_RunToggledOn:
 
 T_DoYouPreventIndoorRun:
 	.string "Do you want to prevent running indoors?\n"
-	.string "If you prevent it, you will no longer\n"
+	.string "If you prevent it, you will no longer\l"
 	.string "be able to run indoors.$"
 
 T_IndoorRunDisabled:
@@ -1135,7 +1132,7 @@ T_IndoorRunDisabled:
 
 T_DoYouAllowIndoorRun:
 	.string "Do you want to allow running indoors?\n"
-	.string "If you allow it, you will be able to\n"
+	.string "If you allow it, you will be able to\l"
 	.string "run indoors.$"
 
 T_IndoorRunEnabled:
@@ -1144,23 +1141,23 @@ T_IndoorRunEnabled:
 
 T_DoYouDisableTMTHMSingleUse:
 	.string "Do you want to disable the single-use\n"
-	.string "restriction for TMs and HMs?\n"
+	.string "restriction for TMs?\p"
 	.string "If you disable it, you will be able to\n"
-	.string "use TMs and HMs multiple times.$"
+	.string "use TMs multiple times.$"
 
 T_TMTHMSingleUseDisabled:
-	.string "The single-use restriction for TMs and\n"
-	.string "HMs has been disabled.\n"
-	.string "You can now use TMs and HMs multiple\n"
+	.string "The single-use restriction for TMs\n"
+	.string "has been disabled.\n"
+	.string "You can now use TMs multiple\n"
 	.string "times.$"
 
 T_DoYouEnableTMTHMSingleUse:
 	.string "Do you want to enable the single-use\n"
-	.string "restriction for TMs and HMs?\n"
+	.string "restriction for TMs?\p"
 	.string "If you enable it, you will only be able\n"
-	.string "to use TMs and HMs once.$"
+	.string "to use TMs once.$"
 
 T_TMTHMSingleUseEnabled:
 	.string "The single-use restriction for TMs and\n"
-	.string "HMs has been enabled.\n"
-	.string "You can now only use TMs and HMs once.$"
+	.string "HMs has been enabled.\l"
+	.string "You can now only use TMs only once.$"
