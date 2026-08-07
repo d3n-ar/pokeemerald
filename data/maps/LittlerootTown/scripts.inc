@@ -945,7 +945,7 @@ LittlerootTown_Text_ExplainRunningShoes:
 	.string "“Slip on these RUNNING SHOES and race\n"
 	.string "in the great outdoors!”\p"
 	.string "(You can toggle the features by talking\n"
-	.string "to the feature NPC in Route 101)$"
+	.string "to the feature NPC in Oldale Town)$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
@@ -1019,7 +1019,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
-@ The NPC is technically in Route 101, but it is called from here for some reason.
+@ The NPC is technically in Oldale Town, but it is called from here for some reason.
 @ Yeah dude, I have truant irl, so stfu.
 ES_ToggleFeatures::
 	lock
