@@ -2,6 +2,8 @@
 #define GUARD_POKEMON_H
 
 #include "sprite.h"
+#include "constants/flags.h"
+#include "event_data.h"
 
 // Property labels for Get(Box)MonData / Set(Box)MonData
 enum {
@@ -335,6 +337,7 @@ struct BattleMove
     u8 target;
     s8 priority;
     u8 flags;
+    u8 split;
 };
 
 #define SPINDA_SPOT_WIDTH 16

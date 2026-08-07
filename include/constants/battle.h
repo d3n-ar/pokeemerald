@@ -385,4 +385,9 @@ enum BattlerId
 // Indicator for the party summary bar to display an empty slot.
 #define HP_EMPTY_SLOT 0xFFFF
 
+// Physical Special Split
+#define SPLIT_PHYSICAL 0
+#define SPLIT_SPECIAL  1
+#define SPLIT_STATUS   2
+
 #endif // GUARD_CONSTANTS_BATTLE_H
