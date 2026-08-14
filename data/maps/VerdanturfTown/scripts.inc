@@ -4,6 +4,7 @@ VerdanturfTown_MapScripts::
 
 VerdanturfTown_OnTransition:
 	setflag FLAG_VISITED_VERDANTURF_TOWN
+	setflag FLAG_HIDE_CONTEST_REPORTER_VERDANTURF
 	setvar VAR_CONTEST_HALL_STATE, 0
 	end
 
