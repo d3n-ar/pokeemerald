@@ -23,6 +23,7 @@
 5. Some refinement in Option menu.
 
 
+>Please ignore the platinum branch as it is not meant to be here.
 
 ### Note: This is a fork of Pret's Pokeemerald
 Official repository of pret [here](https://github.com/pret/pokeemerald)
