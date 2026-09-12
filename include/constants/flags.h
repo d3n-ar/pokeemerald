@@ -693,16 +693,16 @@
 #define FLAG_DEFEATED_MARS                               0x27E
 #define FLAG_HIDE_WINDWORKSVALLEY_INDOORS_GIRL           0x27F
 #define FLAG_HIDE_WINDWORKSVALLEY_GRUNT                  0x280
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_1                    0x281
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_2                    0x282
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_3                    0x283
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_4                    0x284
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_5                    0x285
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_6                    0x286
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_7                    0x287
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_8                    0x288
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_9                    0x289
+#define FLAG_HIDE_RAVAGED_PATH_ROCK_10                   0x28A
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
